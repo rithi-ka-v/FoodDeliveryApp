@@ -30,12 +30,12 @@ app.use('/api/orders', orderRouter);
 app.use('/api/upload', uploadRouter);
 
 const publicFolder = path.join(__dirname, 'public');
-app.use(express.static(publicFolder));
+//app.use(express.static(publicFolder));
 
-app.get('*', (req, res) => {
-  const indexFilePath = path.join(publicFolder, 'index.html');
-  res.sendFile(indexFilePath);
-});
+//app.get('*', (req, res) => {
+ // const indexFilePath = path.join(publicFolder, 'index.html');
+ // res.sendFile(indexFilePath);
+//});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
