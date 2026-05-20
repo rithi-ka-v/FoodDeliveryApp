@@ -16,6 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
+app.use(express.static('public'));
 app.use(express.json());
 app.use(
   cors({
@@ -28,6 +29,7 @@ app.use('/api/foods', foodRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/upload', uploadRouter);
+  //app.use(express.static('public'));
 
 const publicFolder = path.join(__dirname, 'public');
 //app.use(express.static(publicFolder));
