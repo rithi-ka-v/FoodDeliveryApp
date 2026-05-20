@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ['https://fooddeliveryapp-5sak.onrender.com'],
+    origin: ['food-delivery-app-psi-seven.vercel.app'],
   })
 );
 
