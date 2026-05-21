@@ -15,13 +15,16 @@ dbconnect();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
 const app = express();
+
 app.use(express.static('public'));
 app.use(express.json());
+
 app.use(
   cors({
+    origin: true,
     credentials: true,
-    origin: ['food-delivery-app-psi-seven.vercel.app'],
   })
 );
 
